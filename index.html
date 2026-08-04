@@ -7,6 +7,8 @@
     <meta name="description" content="Portfolio of Manish, an entry-level Full-Stack Developer with hands-on experience in Next.js, React, Node.js, MongoDB, and REST APIs.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" as="image" href="assets/B.E%20Pic.jpeg" fetchpriority="high">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -59,7 +61,7 @@
                 <div class="hero-visual">
                     <div class="image-wrapper">
                         <div class="blob-bg"></div>
-                        <img src="assets/B.E Pic.jpeg" alt="Manish Developer Illustration" class="profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <img src="assets/B.E Pic.jpeg" alt="Manish Developer Illustration" class="profile-img" width="800" height="800" decoding="async" fetchpriority="high" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="avatar-fallback" style="display: none;">
                             <i class="fas fa-code"></i>
                         </div>
@@ -408,7 +410,12 @@
                     </div>
 
                     <div class="contact-form-panel">
-                        <form id="contact-form" novalidate>
+                        <form id="contact-form" action="https://formsubmit.co/manishkunthoor@gmail.com" method="POST" novalidate>
+                            <input type="hidden" name="_subject" value="New Portfolio Message">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" id="replyto" name="_replyto" value="">
+
                             <div class="form-group">
                                 <label for="name">Your Name</label>
                                 <input type="text" id="name" name="name" required placeholder="John Doe">
@@ -446,6 +453,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

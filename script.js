@@ -109,6 +109,35 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(element);
     });
 
+    const canUseTilt = window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
+        !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (canUseTilt) {
+        const tiltTargets = document.querySelectorAll(
+            '.image-wrapper, .stat-card, .timeline-content, .skills-category-card, .project-card, .cert-card, .contact-form-panel'
+        );
+
+        tiltTargets.forEach(target => {
+            const maxTilt = target.classList.contains('image-wrapper') ? 9 : 5;
+
+            target.addEventListener('pointermove', event => {
+                const rect = target.getBoundingClientRect();
+                const x = event.clientX - rect.left;
+                const y = event.clientY - rect.top;
+                const rotateY = ((x / rect.width) - 0.5) * maxTilt;
+                const rotateX = (((y / rect.height) - 0.5) * maxTilt) * -1;
+
+                target.style.setProperty('--tilt-x', `${rotateX.toFixed(2)}deg`);
+                target.style.setProperty('--tilt-y', `${rotateY.toFixed(2)}deg`);
+            });
+
+            target.addEventListener('pointerleave', () => {
+                target.style.setProperty('--tilt-x', '0deg');
+                target.style.setProperty('--tilt-y', '0deg');
+            });
+        });
+    }
+
 
     const contactForm = document.getElementById('contact-form');
     const formFeedback = document.getElementById('form-feedback');
@@ -120,6 +149,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const nameInput = document.getElementById('name');
             const emailInput = document.getElementById('email');
             const messageInput = document.getElementById('message');
+            const replyToInput = document.getElementById('replyto');
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const message = messageInput.value.trim();
 
             let isValid = true;
 
@@ -128,18 +161,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 grp.classList.remove('invalid');
             });
 
-            if (nameInput.value.trim() === '') {
+            if (name === '') {
                 nameInput.parentElement.classList.add('invalid');
                 isValid = false;
             }
 
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(emailInput.value.trim())) {
+            if (!emailRegex.test(email)) {
                 emailInput.parentElement.classList.add('invalid');
                 isValid = false;
             }
 
-            if (messageInput.value.trim() === '') {
+            if (message === '') {
                 messageInput.parentElement.classList.add('invalid');
                 isValid = false;
             }
@@ -147,20 +180,30 @@ document.addEventListener('DOMContentLoaded', () => {
             if (isValid) {
                 const submitBtn = contactForm.querySelector('.btn-submit');
                 const btnOriginalContent = submitBtn.innerHTML;
+                const formEndpoint = contactForm.getAttribute('action');
+                const ajaxEndpoint = formEndpoint.replace('https://formsubmit.co/', 'https://formsubmit.co/ajax/');
+
+                if (replyToInput) {
+                    replyToInput.value = email;
+                }
+
                 submitBtn.disabled = true;
                 submitBtn.innerHTML = `<span>Sending...</span> <i class="fas fa-spinner fa-spin"></i>`;
 
-                fetch("https://formsubmit.co/ajax/manishkunthoor@gmail.com", {
+                fetch(ajaxEndpoint, {
                     method: "POST",
                     headers: { 
                         "Content-Type": "application/json",
                         "Accept": "application/json"
                     },
                     body: JSON.stringify({
-                        name: nameInput.value.trim(),
-                        email: emailInput.value.trim(),
-                        message: messageInput.value.trim(),
-                        _subject: "New Portfolio Message from " + nameInput.value.trim()
+                        name,
+                        email,
+                        _replyto: email,
+                        message,
+                        _subject: "New Portfolio Message from " + name,
+                        _template: "table",
+                        _captcha: "false"
                     })
                 })
                 .then(response => {
