@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manish | Entry-Level Full-Stack Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Manish, an entry-level Full-Stack Developer with hands-on experience in Next.js, React, Node.js, MongoDB, and REST APIs.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <span class="gradient-text">Manish</span>.dev
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="welcome-tag">Welcome to my space</span>
+                    <h1>Hi, I'm <span class="gradient-text">Manish</span></h1>
+                    <h2 class="typing-text-container">
+                        I am a <span class="typing-text" id="typing-text"></span><span class="cursor">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        An entry-level Full-Stack Developer with hands-on training and expertise in Next.js, React, Node.js, and MongoDB. I build scalable, user-centric web applications and am eager to contribute to innovative projects.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/manish-kunthoor-99ba00279" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/jayeshgith" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="mailto:manishkunthoor@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="image-wrapper">
+                        <div class="blob-bg"></div>
+                        <img src="assets/B.E Pic.jpeg" alt="Manish Developer Illustration" class="profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="avatar-fallback" style="display: none;">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#about" class="scroll-down" aria-label="Scroll to About section">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <section id="about" class="about-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Get to know me</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="header-bar"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-info">
+                        <h3>Who I Am</h3>
+                        <p>
+                            I am a passionate, detail-oriented Computer Science and Engineering graduate (Class of 2025) with a strong foundation in modern web technologies. Following an intensive 3-month industry training program as a Full-Stack Trainee at Fabsol Bangalore, I have built multiple applications focusing on clean code, responsive design, and database integrations.
+                        </p>
+                        <p>
+                            My goal is to solve real-world problems through scalable, robust software solutions. I thrive in collaborative environments and am committed to continuous learning in this rapidly changing landscape.
+                        </p>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <span class="stat-num">3+</span>
+                                <span class="stat-label">Months Training</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-num">5+</span>
+                                <span class="stat-label">Projects Built</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-num">7.6</span>
+                                <span class="stat-label">B.E. CGPA</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-experience">
+                        <h3>Education & Industry Experience</h3>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Jan 2026 - March 2026</span>
+                                    <h4>Full-Stack Development Trainee</h4>
+                                    <p class="timeline-org">Fabsol Bangalore</p>
+                                    <p>Intensive 3-month training program covering complete frontend and backend stacks. Developed and deployed production-ready features, including API development, user dashboard logic, and authentication systems.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2021 - 2025</span>
+                                    <h4>B.E in Computer Science & Engineering</h4>
+                                    <p class="timeline-org">Vivekananda College of Engineering & Technology, Puttur (VTU)</p>
+                                    <p>Acquired strong academic foundation in algorithms, databases, software engineering, and computer networking. Maintained a cumulative CGPA of 7.6.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Sep 2024 - Feb 2025</span>
+                                    <h4>AI-Data Quality Analyst (Intern)</h4>
+                                    <p class="timeline-org">Rooman Technologies Pvt. Ltd.</p>
+                                    <p>Assisted in verifying and improving the quality of datasets used for training AI models, ensuring high accuracy and consistency for predictive models.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2019 - 2021</span>
+                                    <h4>Pre-University (PUC) & High School</h4>
+                                    <p class="timeline-org">GPUC Kadaba & St. George High School</p>
+                                    <p>PUC: 85% in Science stream. High School (SSLC): 87.84%.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">What I bring to the table</span>
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="header-bar"></div>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skills-category-card">
+                        <div class="skills-category-icon"><i class="fas fa-terminal"></i></div>
+                        <h3>Programming</h3>
+                        <ul class="skills-list">
+                            <li><i class="fab fa-js-square text-javascript"></i> JavaScript (ES6+)</li>
+                            <li><i class="fas fa-code text-typescript"></i> TypeScript</li>
+                            <li><i class="fab fa-html5 text-html"></i> HTML5</li>
+                            <li><i class="fab fa-css3-alt text-css"></i> CSS3</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skills-category-card">
+                        <div class="skills-category-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Frontend Dev</h3>
+                        <ul class="skills-list">
+                            <li><i class="fab fa-react text-react"></i> React.js</li>
+                            <li><i class="fab fa-react text-next"></i> Next.js (App Router)</li>
+                            <li><i class="fab fa-css3-alt text-tailwind"></i> Tailwind CSS</li>
+                            <li><i class="fas fa-chart-bar text-recharts"></i> Recharts (Visualizations)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skills-category-card">
+                        <div class="skills-category-icon"><i class="fas fa-server"></i></div>
+                        <h3>Backend & Databases</h3>
+                        <ul class="skills-list">
+                            <li><i class="fas fa-network-wired text-api"></i> Next.js API Routes</li>
+                            <li><i class="fas fa-exchange-alt text-rest"></i> REST API Integration</li>
+                            <li><i class="fas fa-database text-mongodb"></i> MongoDB (Mongoose)</li>
+                            <li><i class="fas fa-database text-sql"></i> SQL Databases</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skills-category-card">
+                        <div class="skills-category-icon"><i class="fas fa-tools"></i></div>
+                        <h3>Auth & Developer Tools</h3>
+                        <ul class="skills-list">
+                            <li><i class="fas fa-shield-alt text-auth"></i> NextAuth.js & JWT</li>
+                            <li><i class="fab fa-git-alt text-git"></i> Git & GitHub</li>
+                            <li><i class="fab fa-npm text-npm"></i> npm package manager</li>
+                            <li><i class="fas fa-laptop-house text-vscode"></i> VS Code</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">My work & creations</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="header-bar"></div>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-img-container">
+                            <i class="fas fa-wallet project-placeholder-icon"></i>
+                            <div class="project-badge">Next.js & MongoDB</div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-year">2026</span>
+                            <h3>Fabinex</h3>
+                            <p class="project-desc">
+                                A responsive family finance manager app featuring income/expense tracking, group ledger sharing, Stripe test checkout integration, Zod schema validation, file uploads, notifications, and interactive cashflow dashboards using Recharts.
+                            </p>
+                            <div class="project-tags">
+                                <span>Next.js</span>
+                                <span>MongoDB</span>
+                                <span>Tailwind</span>
+                                <span>Stripe</span>
+                                <span>Recharts</span>
+                            </div>
+                            <div class="project-links">
+                                <span class="project-link-disabled"><i class="fas fa-lock"></i> Client Private Repository</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img-container">
+                            <i class="fas fa-running project-placeholder-icon"></i>
+                            <div class="project-badge">AI & WebSockets</div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-year">2024 - 2025</span>
+                            <h3>Kabaddi Scorecard Automation</h3>
+                            <p class="project-desc">
+                                A real-time scoring system using MediaPipe gesture recognition and WebSockets to capture and broadcast scorecard updates instantly, minimizing manual entry and delay during matches.
+                            </p>
+                            <div class="project-tags">
+                                <span>MediaPipe</span>
+                                <span>WebSockets</span>
+                                <span>JavaScript</span>
+                                <span>Real-time</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/jayeshgith" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fab fa-github"></i> GitHub Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img-container">
+                            <i class="fas fa-user-circle project-placeholder-icon"></i>
+                            <div class="project-badge">Next.js & Tailwind</div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-year">Active</span>
+                            <h3>Personal Portfolio</h3>
+                            <p class="project-desc">
+                                An aesthetic portfolio website designed with Tailwind CSS and Next.js, featuring responsive layout structures, about sections, skill cards, and contact details with dynamic rendering.
+                            </p>
+                            <div class="project-tags">
+                                <span>Next.js</span>
+                                <span>Tailwind CSS</span>
+                                <span>Vercel</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://my-site-newpage.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-img-container">
+                            <i class="fas fa-cloud project-placeholder-icon"></i>
+                            <div class="project-badge">Full-Stack CRUD</div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-year">2025</span>
+                            <h3>REST API Post Manager</h3>
+                            <p class="project-desc">
+                                A clean, full-stack REST API application for managing posts, demonstrating secure server controllers, client-side fetch API interaction, and classic CRUD capabilities.
+                            </p>
+                            <div class="project-tags">
+                                <span>Node.js</span>
+                                <span>Express</span>
+                                <span>JavaScript</span>
+                                <span>REST API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/jayeshgith/REST_API_Project" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fab fa-github"></i> GitHub Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="certs-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">My credentials</span>
+                    <h2 class="section-title">Certifications & Achievements</h2>
+                    <div class="header-bar"></div>
+                </div>
+
+                <div class="certs-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                        <div class="cert-info">
+                            <h4>AI Integration for Improving Sensor Data Quality</h4>
+                            <p class="cert-org">IBM | 2024-2025</p>
+                            <p class="cert-desc">Built systems focusing on predictive maintenance workflows using IBM tools to analyze and clean sensor data.</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fab fa-js-square"></i></div>
+                        <div class="cert-info">
+                            <h4>JavaScript Programming Certification Course</h4>
+                            <p class="cert-org">Udemy | 2025</p>
+                            <p class="cert-desc">In-depth advanced JS course covering asynchronous programming, execution context, closures, and ES6+ syntax.</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fab fa-react"></i></div>
+                        <div class="cert-info">
+                            <h4>React.JS Crash Course: Beginner to Pro</h4>
+                            <p class="cert-org">Udemy | 2025</p>
+                            <p class="cert-desc">Mastered state management, component lifecycles, hooks, and optimal rendering patterns in React applications.</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="cert-info">
+                            <h4>Delta Web Full-Stack Development</h4>
+                            <p class="cert-org">Apna College | Professional Course</p>
+                            <p class="cert-desc">Comprehensive training in full-stack web concepts, databases, Node.js servers, and robust API development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Get in touch</span>
+                    <h2 class="section-title">Contact Me</h2>
+                    <div class="header-bar"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info-panel">
+                        <h3>Let's collaborate on your next project!</h3>
+                        <p>I am actively seeking full-time opportunities or internships in Full-Stack, Frontend, or Backend development. Feel free to reach out via email, phone, or LinkedIn!</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-text">
+                                    <span>Email</span>
+                                    <a href="mailto:manishkunthoor@gmail.com">manishkunthoor@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                                <div class="contact-text">
+                                    <span>Phone</span>
+                                    <a href="tel:+917019974493">+91 7019974493</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="contact-text">
+                                    <span>Location</span>
+                                    <span>Kadaba, Dakshina Kannada, Karnataka, India</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-social-icons">
+                            <a href="https://www.linkedin.com/in/manish-kunthoor-99ba00279" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/jayeshgith" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-panel">
+                        <form id="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
+                                <span class="error-msg" id="name-error">Name is required</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" required placeholder="johndoe@example.com">
+                                <span class="error-msg" id="email-error">Please enter a valid email</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Hi Manish, I would like to chat about a vacancy..."></textarea>
+                                <span class="error-msg" id="message-error">Message cannot be empty</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                        <div id="form-feedback" class="form-feedback"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Manish. All rights reserved.</p>
+            <p>Designed with <i class="fas fa-heart text-danger"></i> & built using Vanilla HTML, CSS, and JS.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
